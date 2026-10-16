@@ -17,6 +17,7 @@ export const filterByMinYear = (year: number): BookFilter => {
 };
 
 // фильтр по минимальному рейтингу
+/** @deprecated Пока не используется, задел на фильтр по рейтингу в интерфейсе. */
 export const filterByMinRating = (rating: number): BookFilter => {
   return (book: Book) => book.rating !== undefined && book.rating >= rating;
 };

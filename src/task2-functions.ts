@@ -5,6 +5,7 @@
 import type { Book, Catalog } from './task1-types';
 
 // TODO 1: Добавьте книгу в каталог
+/** @deprecated Функциональный вариант оставлен для сравнения с BookCatalog и тестов Практики 2. */
 export function addBook(catalog: Catalog, book: Book): Catalog {
   return {
     ...catalog,
@@ -14,12 +15,14 @@ export function addBook(catalog: Catalog, book: Book): Catalog {
 
 // удаление книги из каталога по id
 
+/** @deprecated Функциональный вариант оставлен для сравнения с BookCatalog и тестов Практики 2. */
 export function removeBook(catalog: Catalog, id: string): Catalog {
   const { [id]: _, ...rest } = catalog;
   return rest;
 }
 
 // поиск книгу в каталоге по id
+/** @deprecated Пока не используется, задел на получение карточки книги по id. */
 export function getBook(catalog: Catalog, id: string): Book | undefined {
   return catalog[id];
 }
